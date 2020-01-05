@@ -1,0 +1,40 @@
+<div class="contents row">
+  <%= form_tag('/records', method: :post) do %>
+    <h1>学習を記録しよう</h1>
+    <h2>Record Your learning journey!</h2>
+
+ 
+   <div class="form-wrapper">
+      <div class="form-box">
+    　   1:学習日<br>
+        <input placeholder="Date" type="date" name="date"><br>
+      </div>
+
+      <div class="form-box">
+        2:どれくらい学習したか<br>
+        <input placeholder="学習時間" type="number" name="studytime"><br>
+      </div>
+
+      <div class="form-box">
+        3:学んだことを書き出してみよう！<br>
+        <textarea placeholder="今日学んだこと" name="content"></textarea><br>
+      </div>
+    　　 
+      <div class="form-box">
+        今日は実りのある一日でしたか？<br>
+    　　 <label><input type="radio" name="radio">Good</label>
+    　　 <label><input type="radio" name="radio">So so</label>
+      　 <label><input type="radio" name="radio">Bad</label><br>
+      </div>
+   </div>
+  
+   <div class="btn-wrapper">
+    <div class="btn-submit">
+      <input type="reset" value="リセットする">
+    </div>
+    <div class="btn-submit">
+      <input type="submit" value="記録を送信">
+    </div>
+   </div>
+  <% end %>
+</div>
